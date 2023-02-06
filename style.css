@@ -1,0 +1,350 @@
+@import url("html://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed&display=wsap");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    height: 100px;
+    position: relative;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_img{
+    height: 200%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    
+}
+
+.banner_info{
+    padding: 0 1em;
+    position: absolute;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    color: black;
+}
+
+.banner_title{
+    line-height: 1.4;
+    font-size: 2.8em;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    font-family: "robotoco condensed", sans-serif;
+    background-image: url("./imagenes/perros.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.header {
+    z-index: 10;
+}
+
+.header ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header ul li ul {
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li ul li a {
+    font-family: 'lato', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+ul li a {
+    font-family: 'Roboto condensed', sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    display: block;
+    color: white;
+    text-decoration: none; 
+}
+
+ul li {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+}
+
+ul li a:hover{
+    background-color: rgba(231,128,23,0.5);
+}
+
+ul li ul li{
+    display: none;
+}
+
+ul li:hover ul li{
+    display: block;
+} 
+
+h1{
+    font-family: "lato", sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;    
+}
+
+.central {
+    width: 60%;
+    margin: auto;
+    background-color: transparent;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.slider li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity 0.5s;
+}
+
+.slider li:first-child{
+    opacity: 1;
+}
+
+.slider li img{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;   
+}
+
+.botones{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider li:target{
+    opacity: 1;
+}
+
+.footer{
+    bottom: 0%;
+    padding: 0.5em;
+    float: left;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(177, 114, 43);
+    position: absolute; 
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: rgb(175, 115, 46);
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding: 25px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 100px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: rgb(230, 160, 81);
+    text-align: center;
+    transform: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(228, 46, 0);
+}
+
+.pie-pagina .grupo-2{
+    background-color: #cf8c0f;
+    padding: 20px 10px;
+    text-align: center;
+    color: white;
+
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+    }
+}
+
+/*::: boton-modal:::*/
+.boton-modal{
+    width: 8%;
+    height: 2vh;
+    padding: 20px;
+}
+
+.boton-modal label{
+    padding: 10px 15px;
+    background-color: #ecb54d;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: all 300ms ease;
+}
+
+.boton-modal label:hover{
+    background-color: #185E83;
+}
+
+/*:::fin boton-modal:::*/
+
+/*:::ventana emergente:::*/
+#btn-modal{
+    display: none;
+}
+
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background-color: rgba(201, 154, 67, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#btn-modal:checked ~ .container-modal{
+    display: flex;
+}
+
+.content-modal{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.content-modal h2{
+    margin-bottom: 15px;
+}
+
+.content-modal p{
+    padding: 15px 0px;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.content-modal .btn-cerrar{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-modal .btn-cerrar label{
+    padding: 7px 10px;
+    background-color: #5488a3;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transform: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover{
+    background-color: #185E83;
+}
+
+.cerrar-modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+}
+/*:::fin ventana emergente:::*/
+
+.publicacion1{
+    top: 500px;
+    left: 50px;
+    position: absolute;
+}
+.publicacion2{
+    top: 500px;
+    right: 30px;
+    position: absolute;
+}
